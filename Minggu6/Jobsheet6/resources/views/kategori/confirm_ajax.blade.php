@@ -58,7 +58,7 @@
             submitHandler: function(form) {
                 $.ajax({
                     url: form.action,
-                    type: 'DELETE',
+                    type: form.method,
                     data: $(form).serialize(),
                     success: function(response) {
                         if (response.status) {
